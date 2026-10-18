@@ -1,0 +1,1394 @@
+{
+  "run_id": "c4f2fe3afb7442fc87f833e555bbe6c7",
+  "dataset_id": "8fa0110728ce4b8d9ad1bdd3f6a0e61f",
+  "created_at": "2026-10-12T10:18:00.384560+00:00",
+  "config": {
+    "retrievers": [
+      "bm25"
+    ],
+    "presets": [
+      "raw",
+      "diacritics",
+      "tatweel",
+      "alef",
+      "conservative",
+      "aggressive"
+    ],
+    "normalization_side": "both",
+    "bootstrap_samples": 1000,
+    "seed": 42,
+    "dense_model": null,
+    "dense_revision": null,
+    "dense_batch_size": 32,
+    "dense_max_seq_length": 256,
+    "query_prefix": "",
+    "document_prefix": "",
+    "top_k": 100
+  },
+  "dataset": {
+    "dataset_id": "8fa0110728ce4b8d9ad1bdd3f6a0e61f",
+    "name": "Arabic normalization diagnostic CLI",
+    "created_at": "2026-10-12T10:17:59.615691+00:00",
+    "document_count": 16,
+    "query_count": 12,
+    "qrel_count": 192,
+    "hashes": {
+      "corpus": "8880c698e99dea0e6e2f8a002c730b4a2e7aff17c940d043008ad15cf1eb3b39",
+      "queries": "4d99fbc9aae990c65a78eb4d6cb341daaf13779418c34a740dbdf028d26b2229",
+      "qrels": "67339e5ecd644d31f636b08cfbcb37525aaf172694221036972bc13eb81031c1",
+      "corpus_db": "deabd57ac19ef9c73c2fa9439b5b29f65329ce35a3e53fc2dc3f26f1164a11c2"
+    },
+    "provenance": {
+      "id": "arabic-norm-diagnostic",
+      "name": "Arabic normalization diagnostic (16 passages, 12 queries)",
+      "source": "Original fictional Brainwave diagnostic fixture, 2026-10-06; docs MIT license; not MIRACL and not representative of Arabic retrieval",
+      "scope": "diagnostic",
+      "language": "ar",
+      "created": "2026-10-06",
+      "license": "MIT (docs/LICENSE)",
+      "counts": {
+        "passages": 16,
+        "queries": 12,
+        "judgments": 192
+      },
+      "judgment_policy": "Every query-passage pair has an authored binary relevance judgment. Labels reflect the intended query sense documented in README.md; use to test mechanics, not estimate population effects.",
+      "source_selection": "Purposive authored orthographic stress cases and controls; no random sampling."
+    },
+    "warnings": [
+      "Custom, pilot, or query-subset data: not comparable to full MIRACL dev scores."
+    ]
+  },
+  "warnings": [
+    "Custom, pilot, or query-subset data: not comparable to full MIRACL dev scores.",
+    "Unjudged passages count as nonrelevant; qrels are incomplete relevance judgments.",
+    "95% paired percentile intervals are unadjusted; conservative vs raw nDCG@10 is the proposed primary comparison. Other contrasts are exploratory.",
+    "Controlled category-tokenizer BM25 is not the official ArabicAnalyzer baseline."
+  ],
+  "provenance": {
+    "engine_source_sha256": "5eb65041c91bc24b19e8bc8cda609fd48d040b799fd7546bfeb0e47edf1bf912",
+    "python": "3.12.13",
+    "sqlite": "3.46.1",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+    "tokenizer": "unicode-category-v1: contiguous Unicode L/M/N characters or underscore; combining marks and tatweel preserved; no lowercase, NFC/NFKC, stemming, stopwords, or other normalization. BM25 uses unique query terms.",
+    "document_fields": "title + newline + text",
+    "tie_break": "corpus ordinal ascending",
+    "trec_export_scores": "rank-based decreasing integers; raw scores in JSON",
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75,
+      "idf": "ln(1+(N-df+0.5)/(df+0.5))",
+      "query_term_frequency": "unique terms"
+    },
+    "dense": null,
+    "bootstrap": {
+      "unit": "query",
+      "paired": true,
+      "method": "percentile",
+      "confidence": 0.95
+    }
+  },
+  "conditions": [
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "metrics": {
+        "ndcg@10": 0.75,
+        "recall@5": 0.75,
+        "recall@10": 0.75,
+        "recall@100": 0.75,
+        "mrr@10": 0.75
+      },
+      "changed_queries": 0,
+      "changed_documents": 0,
+      "slices": {
+        "all": {
+          "query_count": 12,
+          "metrics": {
+            "ndcg@10": 0.75,
+            "recall@5": 0.75,
+            "recall@10": 0.75,
+            "recall@100": 0.75,
+            "mrr@10": 0.75
+          }
+        },
+        "query_changed": {
+          "query_count": 0,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "query_unchanged": {
+          "query_count": 12,
+          "metrics": {
+            "ndcg@10": 0.75,
+            "recall@5": 0.75,
+            "recall@10": 0.75,
+            "recall@100": 0.75,
+            "mrr@10": 0.75
+          }
+        },
+        "tag:alef": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 0.5,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "recall@100": 0.5,
+            "mrr@10": 0.5
+          }
+        },
+        "tag:alef_maqsura": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:bare_hamza": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:collision": {
+          "query_count": 4,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:control": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:diacritics": {
+          "query_count": 3,
+          "metrics": {
+            "ndcg@10": 0.3333333333333333,
+            "recall@5": 0.3333333333333333,
+            "recall@10": 0.3333333333333333,
+            "recall@100": 0.3333333333333333,
+            "mrr@10": 0.3333333333333333
+          }
+        },
+        "tag:digits": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:document_variation": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "tag:named_entity": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:outside_primary_rules": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:taa_marbuta": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:tatweel": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "tag:unchanged_query": {
+          "query_count": 3,
+          "metrics": {
+            "ndcg@10": 0.3333333333333333,
+            "recall@5": 0.3333333333333333,
+            "recall@10": 0.3333333333333333,
+            "recall@100": 0.3333333333333333,
+            "mrr@10": 0.3333333333333333
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 12
+        },
+        "recall@5": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 12
+        },
+        "recall@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 12
+        },
+        "recall@100": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 12
+        },
+        "mrr@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 12
+        }
+      }
+    },
+    {
+      "retriever": "bm25",
+      "preset": "diacritics",
+      "metrics": {
+        "ndcg@10": 0.9166666666666666,
+        "recall@5": 0.9166666666666666,
+        "recall@10": 0.9166666666666666,
+        "recall@100": 0.9166666666666666,
+        "mrr@10": 0.9166666666666666
+      },
+      "changed_queries": 1,
+      "changed_documents": 4,
+      "slices": {
+        "all": {
+          "query_count": 12,
+          "metrics": {
+            "ndcg@10": 0.9166666666666666,
+            "recall@5": 0.9166666666666666,
+            "recall@10": 0.9166666666666666,
+            "recall@100": 0.9166666666666666,
+            "mrr@10": 0.9166666666666666
+          }
+        },
+        "query_changed": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "query_unchanged": {
+          "query_count": 11,
+          "metrics": {
+            "ndcg@10": 0.9090909090909091,
+            "recall@5": 0.9090909090909091,
+            "recall@10": 0.9090909090909091,
+            "recall@100": 0.9090909090909091,
+            "mrr@10": 0.9090909090909091
+          }
+        },
+        "tag:alef": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:alef_maqsura": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:bare_hamza": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:collision": {
+          "query_count": 4,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:control": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:diacritics": {
+          "query_count": 3,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:digits": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:document_variation": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "tag:named_entity": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:outside_primary_rules": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:taa_marbuta": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:tatweel": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "tag:unchanged_query": {
+          "query_count": 3,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": 0.16666666666666666,
+          "ci_low": 0.0,
+          "ci_high": 0.4166666666666667,
+          "wins": 2,
+          "losses": 0,
+          "ties": 10
+        },
+        "recall@5": {
+          "delta": 0.16666666666666666,
+          "ci_low": 0.0,
+          "ci_high": 0.4166666666666667,
+          "wins": 2,
+          "losses": 0,
+          "ties": 10
+        },
+        "recall@10": {
+          "delta": 0.16666666666666666,
+          "ci_low": 0.0,
+          "ci_high": 0.4166666666666667,
+          "wins": 2,
+          "losses": 0,
+          "ties": 10
+        },
+        "recall@100": {
+          "delta": 0.16666666666666666,
+          "ci_low": 0.0,
+          "ci_high": 0.4166666666666667,
+          "wins": 2,
+          "losses": 0,
+          "ties": 10
+        },
+        "mrr@10": {
+          "delta": 0.16666666666666666,
+          "ci_low": 0.0,
+          "ci_high": 0.4166666666666667,
+          "wins": 2,
+          "losses": 0,
+          "ties": 10
+        }
+      }
+    },
+    {
+      "retriever": "bm25",
+      "preset": "tatweel",
+      "metrics": {
+        "ndcg@10": 0.8333333333333334,
+        "recall@5": 0.8333333333333334,
+        "recall@10": 0.8333333333333334,
+        "recall@100": 0.8333333333333334,
+        "mrr@10": 0.8333333333333334
+      },
+      "changed_queries": 0,
+      "changed_documents": 1,
+      "slices": {
+        "all": {
+          "query_count": 12,
+          "metrics": {
+            "ndcg@10": 0.8333333333333334,
+            "recall@5": 0.8333333333333334,
+            "recall@10": 0.8333333333333334,
+            "recall@100": 0.8333333333333334,
+            "mrr@10": 0.8333333333333334
+          }
+        },
+        "query_changed": {
+          "query_count": 0,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "query_unchanged": {
+          "query_count": 12,
+          "metrics": {
+            "ndcg@10": 0.8333333333333334,
+            "recall@5": 0.8333333333333334,
+            "recall@10": 0.8333333333333334,
+            "recall@100": 0.8333333333333334,
+            "mrr@10": 0.8333333333333334
+          }
+        },
+        "tag:alef": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 0.5,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "recall@100": 0.5,
+            "mrr@10": 0.5
+          }
+        },
+        "tag:alef_maqsura": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:bare_hamza": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:collision": {
+          "query_count": 4,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:control": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:diacritics": {
+          "query_count": 3,
+          "metrics": {
+            "ndcg@10": 0.3333333333333333,
+            "recall@5": 0.3333333333333333,
+            "recall@10": 0.3333333333333333,
+            "recall@100": 0.3333333333333333,
+            "mrr@10": 0.3333333333333333
+          }
+        },
+        "tag:digits": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:document_variation": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:named_entity": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:outside_primary_rules": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:taa_marbuta": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:tatweel": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:unchanged_query": {
+          "query_count": 3,
+          "metrics": {
+            "ndcg@10": 0.3333333333333333,
+            "recall@5": 0.3333333333333333,
+            "recall@10": 0.3333333333333333,
+            "recall@100": 0.3333333333333333,
+            "mrr@10": 0.3333333333333333
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": 0.08333333333333333,
+          "ci_low": 0.0,
+          "ci_high": 0.25,
+          "wins": 1,
+          "losses": 0,
+          "ties": 11
+        },
+        "recall@5": {
+          "delta": 0.08333333333333333,
+          "ci_low": 0.0,
+          "ci_high": 0.25,
+          "wins": 1,
+          "losses": 0,
+          "ties": 11
+        },
+        "recall@10": {
+          "delta": 0.08333333333333333,
+          "ci_low": 0.0,
+          "ci_high": 0.25,
+          "wins": 1,
+          "losses": 0,
+          "ties": 11
+        },
+        "recall@100": {
+          "delta": 0.08333333333333333,
+          "ci_low": 0.0,
+          "ci_high": 0.25,
+          "wins": 1,
+          "losses": 0,
+          "ties": 11
+        },
+        "mrr@10": {
+          "delta": 0.08333333333333333,
+          "ci_low": 0.0,
+          "ci_high": 0.25,
+          "wins": 1,
+          "losses": 0,
+          "ties": 11
+        }
+      }
+    },
+    {
+      "retriever": "bm25",
+      "preset": "alef",
+      "metrics": {
+        "ndcg@10": 0.75,
+        "recall@5": 0.75,
+        "recall@10": 0.75,
+        "recall@100": 0.75,
+        "mrr@10": 0.75
+      },
+      "changed_queries": 1,
+      "changed_documents": 9,
+      "slices": {
+        "all": {
+          "query_count": 12,
+          "metrics": {
+            "ndcg@10": 0.75,
+            "recall@5": 0.75,
+            "recall@10": 0.75,
+            "recall@100": 0.75,
+            "mrr@10": 0.75
+          }
+        },
+        "query_changed": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "query_unchanged": {
+          "query_count": 11,
+          "metrics": {
+            "ndcg@10": 0.8181818181818182,
+            "recall@5": 0.8181818181818182,
+            "recall@10": 0.8181818181818182,
+            "recall@100": 0.8181818181818182,
+            "mrr@10": 0.8181818181818182
+          }
+        },
+        "tag:alef": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 0.5,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "recall@100": 0.5,
+            "mrr@10": 0.5
+          }
+        },
+        "tag:alef_maqsura": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:bare_hamza": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:collision": {
+          "query_count": 4,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:control": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:diacritics": {
+          "query_count": 3,
+          "metrics": {
+            "ndcg@10": 0.3333333333333333,
+            "recall@5": 0.3333333333333333,
+            "recall@10": 0.3333333333333333,
+            "recall@100": 0.3333333333333333,
+            "mrr@10": 0.3333333333333333
+          }
+        },
+        "tag:digits": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:document_variation": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "tag:named_entity": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:outside_primary_rules": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:taa_marbuta": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:tatweel": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "tag:unchanged_query": {
+          "query_count": 3,
+          "metrics": {
+            "ndcg@10": 0.3333333333333333,
+            "recall@5": 0.3333333333333333,
+            "recall@10": 0.3333333333333333,
+            "recall@100": 0.3333333333333333,
+            "mrr@10": 0.3333333333333333
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 12
+        },
+        "recall@5": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 12
+        },
+        "recall@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 12
+        },
+        "recall@100": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 12
+        },
+        "mrr@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 12
+        }
+      }
+    },
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "metrics": {
+        "ndcg@10": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "recall@100": 1.0,
+        "mrr@10": 1.0
+      },
+      "changed_queries": 2,
+      "changed_documents": 10,
+      "slices": {
+        "all": {
+          "query_count": 12,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "query_changed": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "query_unchanged": {
+          "query_count": 10,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:alef": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:alef_maqsura": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:bare_hamza": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:collision": {
+          "query_count": 4,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:control": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:diacritics": {
+          "query_count": 3,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:digits": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:document_variation": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:named_entity": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:outside_primary_rules": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:taa_marbuta": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:tatweel": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:unchanged_query": {
+          "query_count": 3,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": 0.25,
+          "ci_low": 0.0,
+          "ci_high": 0.5,
+          "wins": 3,
+          "losses": 0,
+          "ties": 9
+        },
+        "recall@5": {
+          "delta": 0.25,
+          "ci_low": 0.0,
+          "ci_high": 0.5,
+          "wins": 3,
+          "losses": 0,
+          "ties": 9
+        },
+        "recall@10": {
+          "delta": 0.25,
+          "ci_low": 0.0,
+          "ci_high": 0.5,
+          "wins": 3,
+          "losses": 0,
+          "ties": 9
+        },
+        "recall@100": {
+          "delta": 0.25,
+          "ci_low": 0.0,
+          "ci_high": 0.5,
+          "wins": 3,
+          "losses": 0,
+          "ties": 9
+        },
+        "mrr@10": {
+          "delta": 0.25,
+          "ci_low": 0.0,
+          "ci_high": 0.5,
+          "wins": 3,
+          "losses": 0,
+          "ties": 9
+        }
+      }
+    },
+    {
+      "retriever": "bm25",
+      "preset": "aggressive",
+      "metrics": {
+        "ndcg@10": 0.9384882922619097,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "recall@100": 1.0,
+        "mrr@10": 0.9166666666666666
+      },
+      "changed_queries": 8,
+      "changed_documents": 16,
+      "slices": {
+        "all": {
+          "query_count": 12,
+          "metrics": {
+            "ndcg@10": 0.9384882922619097,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 0.9166666666666666
+          }
+        },
+        "query_changed": {
+          "query_count": 8,
+          "metrics": {
+            "ndcg@10": 0.9538662191964322,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 0.9375
+          }
+        },
+        "query_unchanged": {
+          "query_count": 4,
+          "metrics": {
+            "ndcg@10": 0.9077324383928644,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 0.875
+          }
+        },
+        "tag:alef": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:alef_maqsura": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 0.6309297535714575,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 0.5
+          }
+        },
+        "tag:bare_hamza": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:collision": {
+          "query_count": 4,
+          "metrics": {
+            "ndcg@10": 0.8154648767857288,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 0.75
+          }
+        },
+        "tag:control": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:diacritics": {
+          "query_count": 3,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:digits": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:document_variation": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:named_entity": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 0.6309297535714575,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 0.5
+          }
+        },
+        "tag:outside_primary_rules": {
+          "query_count": 2,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:taa_marbuta": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:tatweel": {
+          "query_count": 1,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:unchanged_query": {
+          "query_count": 3,
+          "metrics": {
+            "ndcg@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": 0.18848829226190958,
+          "ci_low": -0.061735063444935456,
+          "ci_high": 0.46924414613095483,
+          "wins": 3,
+          "losses": 2,
+          "ties": 7
+        },
+        "recall@5": {
+          "delta": 0.25,
+          "ci_low": 0.0,
+          "ci_high": 0.5,
+          "wins": 3,
+          "losses": 0,
+          "ties": 9
+        },
+        "recall@10": {
+          "delta": 0.25,
+          "ci_low": 0.0,
+          "ci_high": 0.5,
+          "wins": 3,
+          "losses": 0,
+          "ties": 9
+        },
+        "recall@100": {
+          "delta": 0.25,
+          "ci_low": 0.0,
+          "ci_high": 0.5,
+          "wins": 3,
+          "losses": 0,
+          "ties": 9
+        },
+        "mrr@10": {
+          "delta": 0.16666666666666666,
+          "ci_low": -0.08437499999999994,
+          "ci_high": 0.4583333333333333,
+          "wins": 3,
+          "losses": 2,
+          "ties": 7
+        }
+      }
+    }
+  ]
+}

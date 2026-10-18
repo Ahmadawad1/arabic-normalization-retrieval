@@ -1,0 +1,470 @@
+{
+  "run_id": "e908669c7029431fb8eceda517ad01fe",
+  "dataset_id": "881a86b3d4af40adbfb3e80a3334262e",
+  "created_at": "2026-10-14T09:08:58.832226+00:00",
+  "config": {
+    "retrievers": [
+      "bm25"
+    ],
+    "presets": [
+      "raw",
+      "conservative"
+    ],
+    "normalization_side": "both",
+    "bootstrap_samples": 10000,
+    "seed": 42,
+    "dense_model": null,
+    "dense_revision": null,
+    "dense_batch_size": 32,
+    "dense_max_seq_length": 256,
+    "query_prefix": "",
+    "document_prefix": "",
+    "top_k": 100
+  },
+  "dataset": {
+    "dataset_id": "881a86b3d4af40adbfb3e80a3334262e",
+    "name": "MIRACL Arabic full corpus dev query sample 100 seed 42",
+    "created_at": "2026-10-14T07:20:04.201180+00:00",
+    "document_count": 2061414,
+    "query_count": 100,
+    "qrel_count": 1015,
+    "hashes": {
+      "corpus": "0f8568856882e7cebe7ab32674293426a74aa6b194997e03dc0a16ea54328f23",
+      "queries": "7997653fe8fae5cffb79b4ada11d66a51c339322a0e20adc05e203eb0d1d6c9a",
+      "qrels": "23d59529ac1d5dac69d82f91eb28657d56b81d3aef96be82735eeaeade388207",
+      "corpus_db": "bd3d5ea436e69247e91be8074bf737c7a91008721c7e199a0f1488c4dc748d6e"
+    },
+    "provenance": {
+      "source": "MIRACL",
+      "language": "ar",
+      "split": "dev",
+      "scope": "full-corpus-query-subset",
+      "corpus_scope": "full",
+      "dataset_revision": "5be20db9509754dadad47689368639fcec739c00",
+      "corpus_revision": "d921ec7e349ce0d28daf30b2da9da5ee698bef0d",
+      "query_selection": {
+        "method": "lowest sha256(seed:qid) before retrieval",
+        "seed": 42,
+        "requested_limit": 100,
+        "available_queries": 2896,
+        "selected_queries": 100,
+        "selected_qids": [
+          "10103",
+          "10172",
+          "10287",
+          "10361",
+          "10529",
+          "1060",
+          "10618",
+          "10624",
+          "10651",
+          "1106",
+          "11129",
+          "11282",
+          "11549",
+          "11563",
+          "12037",
+          "12351",
+          "1240",
+          "12709",
+          "12730",
+          "12739",
+          "12804",
+          "1284",
+          "13311",
+          "13335",
+          "13480",
+          "13760",
+          "1377",
+          "13796",
+          "13803",
+          "14041",
+          "14446",
+          "14716",
+          "14731",
+          "14851",
+          "14856",
+          "14951",
+          "1793",
+          "1872",
+          "188",
+          "2053",
+          "2114",
+          "2120",
+          "2393",
+          "2602",
+          "2857",
+          "2869",
+          "2977",
+          "3172",
+          "3352",
+          "3364",
+          "3379",
+          "3456",
+          "3596",
+          "3618",
+          "3663",
+          "3691",
+          "3774",
+          "3807",
+          "4085",
+          "4111",
+          "4483",
+          "462",
+          "4679",
+          "4980",
+          "5177",
+          "5256",
+          "5395",
+          "5608",
+          "5609",
+          "6544",
+          "6588",
+          "660",
+          "7281",
+          "7460",
+          "7468",
+          "7499",
+          "7723",
+          "7864",
+          "8182",
+          "8397",
+          "8417",
+          "8421",
+          "8428",
+          "8659",
+          "8721",
+          "88",
+          "8802",
+          "8840",
+          "8923",
+          "8960",
+          "904",
+          "912",
+          "9138",
+          "926",
+          "9458",
+          "9491",
+          "9505",
+          "9549",
+          "9624",
+          "9818"
+        ]
+      },
+      "corpus_selection": {
+        "method": "all passages",
+        "requested_distractors": null,
+        "scanned_passages": 2061414,
+        "included_passages": 2061414,
+        "label_informed": false
+      },
+      "sources": {
+        "topics": "https://huggingface.co/datasets/miracl/miracl/resolve/5be20db9509754dadad47689368639fcec739c00/miracl-v1.0-ar/topics/topics.miracl-v1.0-ar-dev.tsv",
+        "qrels": "https://huggingface.co/datasets/miracl/miracl/resolve/5be20db9509754dadad47689368639fcec739c00/miracl-v1.0-ar/qrels/qrels.miracl-v1.0-ar-dev.tsv",
+        "corpus": [
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-0.jsonl.gz",
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-1.jsonl.gz",
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-2.jsonl.gz",
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-3.jsonl.gz",
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-4.jsonl.gz"
+        ]
+      },
+      "license_notice": "Retain the MIRACL dataset citation and original source licenses; Wikipedia-derived passage content requires its upstream attribution.",
+      "prepared_hashes": {
+        "corpus.jsonl": "0f8568856882e7cebe7ab32674293426a74aa6b194997e03dc0a16ea54328f23",
+        "queries.jsonl": "7340d839c6f81c02a8c9434574fb6724630f436deedbf8d7ea7c8d6a74aff221",
+        "qrels.tsv": "23d59529ac1d5dac69d82f91eb28657d56b81d3aef96be82735eeaeade388207"
+      }
+    },
+    "warnings": [
+      "Custom, pilot, or query-subset data: not comparable to full MIRACL dev scores."
+    ]
+  },
+  "warnings": [
+    "Custom, pilot, or query-subset data: not comparable to full MIRACL dev scores.",
+    "Unjudged passages count as nonrelevant; qrels are incomplete relevance judgments.",
+    "95% paired percentile intervals are unadjusted; conservative vs raw nDCG@10 is the proposed primary comparison. Other contrasts are exploratory.",
+    "Controlled category-tokenizer BM25 is not the official ArabicAnalyzer baseline."
+  ],
+  "provenance": {
+    "engine_source_sha256": "43b8f73abaeaf5e5f6f367d5eec11a559c536929c40935bdeb4f2078d15b59ba",
+    "python": "3.12.13",
+    "sqlite": "3.46.1",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+    "tokenizer": "unicode-category-v1: contiguous Unicode L/M/N characters or underscore; combining marks and tatweel preserved; no lowercase, NFC/NFKC, stemming, stopwords, or other normalization. BM25 uses unique query terms.",
+    "document_fields": "title + newline + text",
+    "tie_break": "corpus ordinal ascending",
+    "trec_export_scores": "rank-based decreasing integers; raw scores in JSON",
+    "cache_storage": "external",
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75,
+      "query_workers": 8,
+      "idf": "ln(1+(N-df+0.5)/(df+0.5))",
+      "query_term_frequency": "unique terms"
+    },
+    "dense": null,
+    "bootstrap": {
+      "unit": "query",
+      "paired": true,
+      "method": "percentile",
+      "confidence": 0.95
+    }
+  },
+  "conditions": [
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "metrics": {
+        "ndcg@10": 0.3953890691095245,
+        "recall@5": 0.4406666666666667,
+        "recall@10": 0.5026666666666667,
+        "recall@100": 0.741,
+        "mrr@10": 0.4051071428571429
+      },
+      "changed_queries": 0,
+      "changed_documents": 0,
+      "slices": {
+        "all": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.3953890691095245,
+            "recall@5": 0.4406666666666667,
+            "recall@10": 0.5026666666666667,
+            "recall@100": 0.741,
+            "mrr@10": 0.4051071428571429
+          }
+        },
+        "query_changed": {
+          "query_count": 0,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "query_unchanged": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.3953890691095245,
+            "recall@5": 0.4406666666666667,
+            "recall@10": 0.5026666666666667,
+            "recall@100": 0.741,
+            "mrr@10": 0.4051071428571429
+          }
+        },
+        "tag:contains_alef_maqsura": {
+          "query_count": 30,
+          "metrics": {
+            "ndcg@10": 0.4501824549448536,
+            "recall@5": 0.49444444444444446,
+            "recall@10": 0.5277777777777778,
+            "recall@100": 0.7511111111111112,
+            "mrr@10": 0.4666666666666667
+          }
+        },
+        "tag:contains_alef_variants": {
+          "query_count": 46,
+          "metrics": {
+            "ndcg@10": 0.4294984883927577,
+            "recall@5": 0.5344202898550724,
+            "recall@10": 0.5452898550724637,
+            "recall@100": 0.7971014492753623,
+            "mrr@10": 0.4072463768115942
+          }
+        },
+        "tag:contains_diacritics": {
+          "query_count": 5,
+          "metrics": {
+            "ndcg@10": 0.38394415782963753,
+            "recall@5": 0.4,
+            "recall@10": 0.4,
+            "recall@100": 0.6666666666666667,
+            "mrr@10": 0.4
+          }
+        },
+        "tag:contains_taa_marbuta": {
+          "query_count": 48,
+          "metrics": {
+            "ndcg@10": 0.4266722141047072,
+            "recall@5": 0.4739583333333333,
+            "recall@10": 0.5052083333333334,
+            "recall@100": 0.7576388888888889,
+            "mrr@10": 0.41909722222222223
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "recall@5": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "recall@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "recall@100": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "mrr@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        }
+      }
+    },
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "metrics": {
+        "ndcg@10": 0.4051260862029449,
+        "recall@5": 0.45516666666666666,
+        "recall@10": 0.5196666666666667,
+        "recall@100": 0.7609999999999999,
+        "mrr@10": 0.41235714285714287
+      },
+      "changed_queries": 49,
+      "changed_documents": 1852030,
+      "slices": {
+        "all": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.4051260862029449,
+            "recall@5": 0.45516666666666666,
+            "recall@10": 0.5196666666666667,
+            "recall@100": 0.7609999999999999,
+            "mrr@10": 0.41235714285714287
+          }
+        },
+        "query_changed": {
+          "query_count": 49,
+          "metrics": {
+            "ndcg@10": 0.4522519008941903,
+            "recall@5": 0.5476190476190476,
+            "recall@10": 0.5629251700680272,
+            "recall@100": 0.8095238095238094,
+            "mrr@10": 0.43265306122448977
+          }
+        },
+        "query_unchanged": {
+          "query_count": 51,
+          "metrics": {
+            "ndcg@10": 0.35984834267606197,
+            "recall@5": 0.3663398692810458,
+            "recall@10": 0.47810457516339866,
+            "recall@100": 0.7143790849673202,
+            "mrr@10": 0.39285714285714285
+          }
+        },
+        "tag:contains_alef_maqsura": {
+          "query_count": 30,
+          "metrics": {
+            "ndcg@10": 0.45317450839609835,
+            "recall@5": 0.49444444444444446,
+            "recall@10": 0.5277777777777778,
+            "recall@100": 0.7844444444444445,
+            "mrr@10": 0.47
+          }
+        },
+        "tag:contains_alef_variants": {
+          "query_count": 46,
+          "metrics": {
+            "ndcg@10": 0.45508801648444364,
+            "recall@5": 0.5507246376811594,
+            "recall@10": 0.5670289855072463,
+            "recall@100": 0.8188405797101449,
+            "mrr@10": 0.4318840579710145
+          }
+        },
+        "tag:contains_diacritics": {
+          "query_count": 5,
+          "metrics": {
+            "ndcg@10": 0.24525887710618335,
+            "recall@5": 0.3,
+            "recall@10": 0.3,
+            "recall@100": 0.6666666666666667,
+            "mrr@10": 0.26666666666666666
+          }
+        },
+        "tag:contains_taa_marbuta": {
+          "query_count": 48,
+          "metrics": {
+            "ndcg@10": 0.42793659424589464,
+            "recall@5": 0.46875,
+            "recall@10": 0.5052083333333334,
+            "recall@100": 0.7576388888888889,
+            "mrr@10": 0.41944444444444445
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": 0.009737017093420368,
+          "ci_low": -0.010449096469920335,
+          "ci_high": 0.030213465401025437,
+          "wins": 7,
+          "losses": 5,
+          "ties": 88
+        },
+        "recall@5": {
+          "delta": 0.014499999999999999,
+          "ci_low": -0.011000000000000001,
+          "ci_high": 0.0475,
+          "wins": 3,
+          "losses": 2,
+          "ties": 95
+        },
+        "recall@10": {
+          "delta": 0.017,
+          "ci_low": -0.008,
+          "ci_high": 0.05002499999999964,
+          "wins": 3,
+          "losses": 1,
+          "ties": 96
+        },
+        "recall@100": {
+          "delta": 0.02,
+          "ci_low": 0.0,
+          "ci_high": 0.05,
+          "wins": 2,
+          "losses": 0,
+          "ties": 98
+        },
+        "mrr@10": {
+          "delta": 0.0072499999999999995,
+          "ci_low": -0.012833333333333337,
+          "ci_high": 0.026000000000000002,
+          "wins": 7,
+          "losses": 3,
+          "ties": 90
+        }
+      }
+    }
+  ]
+}

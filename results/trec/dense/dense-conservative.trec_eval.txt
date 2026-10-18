@@ -1,0 +1,10 @@
+Rprec                 	all	0.2280
+P_5                   	all	0.1261
+P_10                  	all	0.0857
+P_100                 	all	0.0151
+recall_5              	all	0.3863
+recall_10             	all	0.4968
+recall_100            	all	0.7991
+ndcg_cut_10           	all	0.3603
+map_cut_100           	all	0.3061
+recip_rank            	all	0.3619

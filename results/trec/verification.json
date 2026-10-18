@@ -1,0 +1,416 @@
+{
+  "status": "passed",
+  "comparison_count": 40,
+  "tolerance": 5.00001e-05,
+  "tolerance_reason": "trec_eval summary output is rounded to four decimals",
+  "evaluator": {
+    "name": "NIST trec_eval",
+    "version": "10.0-rc3",
+    "source_commit": "35cf096ba6d5ae08ca4803c056b31ed61a56a6d4"
+  },
+  "qrels": {
+    "path": "/workspace/docs/experiment-3/work/full-dev-trec/qrels.tsv",
+    "sha256": "adbcddefac2161c84567288e9ec20ebdd702d38c914cad1768d43524cebb354f"
+  },
+  "sources": [
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "run_file": "/workspace/docs/experiment-3/work/full-dev-trec/bm25/bm25-conservative.trec",
+      "run_sha256": "4554806fc4ec5190e805c72af6b7fac64377813d030c113f5b297e63c6eda78c",
+      "trec_eval_output": "/workspace/docs/experiment-3/work/full-dev-trec/bm25/bm25-conservative.trec_eval.txt",
+      "trec_eval_output_sha256": "ad4ed2219eb5f135213defea02f795836fec89d9f8f075cf620352166204a0f8"
+    },
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "run_file": "/workspace/docs/experiment-3/work/full-dev-trec/bm25/bm25-raw.trec",
+      "run_sha256": "3ef29b2391c904272331ac4ccb4f4caa8fcea669f7dfcb7f87781897288fe08e",
+      "trec_eval_output": "/workspace/docs/experiment-3/work/full-dev-trec/bm25/bm25-raw.trec_eval.txt",
+      "trec_eval_output_sha256": "b4b55369f8d45c13ca777359aa3580b9fd5c9efab59a526398e9504b6d4683f5"
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "run_file": "/workspace/docs/experiment-3/work/full-dev-trec/dense/dense-conservative.trec",
+      "run_sha256": "69b6f88a4953d9805c0deba8e39369d17ff7bac3eea35a5cb4b7626138bb1cfb",
+      "trec_eval_output": "/workspace/docs/experiment-3/work/full-dev-trec/dense/dense-conservative.trec_eval.txt",
+      "trec_eval_output_sha256": "a0f94f43bd97a5d20d2fbaede07e0c6fa7057c21ab4e520bd7ed09005de8cb5a"
+    },
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "run_file": "/workspace/docs/experiment-3/work/full-dev-trec/dense/dense-raw.trec",
+      "run_sha256": "ccf0f2f4571efb4d3c4463be2fd00bc887b36f0081f10ac3314aa006368d60ce",
+      "trec_eval_output": "/workspace/docs/experiment-3/work/full-dev-trec/dense/dense-raw.trec_eval.txt",
+      "trec_eval_output_sha256": "94132bf84e05b7f9c58e132d10f778c6be7e6cd4e0610480ef87ee4a3ddf8c25"
+    }
+  ],
+  "comparisons": [
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "metric": "r_precision",
+      "brainwave": 0.24044878540734896,
+      "trec_eval": 0.2404,
+      "difference": -4.8785407348955756e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "metric": "precision@5",
+      "brainwave": 0.12430939226519337,
+      "trec_eval": 0.1243,
+      "difference": -9.392265193378102e-06,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "metric": "precision@10",
+      "brainwave": 0.08211325966850828,
+      "trec_eval": 0.0821,
+      "difference": -1.3259668508278089e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "metric": "precision@100",
+      "brainwave": 0.014129834254143646,
+      "trec_eval": 0.0141,
+      "difference": -2.9834254143646516e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "metric": "recall@5",
+      "brainwave": 0.37987755415241603,
+      "trec_eval": 0.3799,
+      "difference": 2.2445847583985046e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "metric": "recall@10",
+      "brainwave": 0.47687327348066294,
+      "trec_eval": 0.4769,
+      "difference": 2.672651933705028e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "metric": "recall@100",
+      "brainwave": 0.7516560883100939,
+      "trec_eval": 0.7517,
+      "difference": 4.3911689906139806e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "metric": "ndcg_graded@10",
+      "brainwave": 0.36049763174245314,
+      "trec_eval": 0.3605,
+      "difference": 2.368257546847552e-06,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "metric": "ap@100",
+      "brainwave": 0.31032894057813193,
+      "trec_eval": 0.3103,
+      "difference": -2.8940578131908534e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "conservative",
+      "metric": "mrr@10",
+      "brainwave": 0.37337254998684555,
+      "trec_eval": 0.3734,
+      "difference": 2.745001315446194e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "metric": "r_precision",
+      "brainwave": 0.23027533872665087,
+      "trec_eval": 0.2303,
+      "difference": 2.4661273349130264e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "metric": "precision@5",
+      "brainwave": 0.11781767955801105,
+      "trec_eval": 0.1178,
+      "difference": -1.7679558011046703e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "metric": "precision@10",
+      "brainwave": 0.07796961325966852,
+      "trec_eval": 0.078,
+      "difference": 3.038674033148392e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "metric": "precision@100",
+      "brainwave": 0.013428867403314917,
+      "trec_eval": 0.0134,
+      "difference": -2.8867403314916315e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "metric": "recall@5",
+      "brainwave": 0.3627932342366044,
+      "trec_eval": 0.3628,
+      "difference": 6.765763395588653e-06,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "metric": "recall@10",
+      "brainwave": 0.45499923265807246,
+      "trec_eval": 0.455,
+      "difference": 7.673419275544546e-07,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "metric": "recall@100",
+      "brainwave": 0.7190235025870386,
+      "trec_eval": 0.719,
+      "difference": -2.3502587038648493e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "metric": "ndcg_graded@10",
+      "brainwave": 0.345233770085264,
+      "trec_eval": 0.3452,
+      "difference": -3.37700852640066e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "metric": "ap@100",
+      "brainwave": 0.2977338943203837,
+      "trec_eval": 0.2977,
+      "difference": -3.389432038369833e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "bm25",
+      "preset": "raw",
+      "metric": "mrr@10",
+      "brainwave": 0.35823974502323946,
+      "trec_eval": 0.3582,
+      "difference": -3.974502323944584e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "metric": "r_precision",
+      "brainwave": 0.22798454902218715,
+      "trec_eval": 0.228,
+      "difference": 1.5450977812858646e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "metric": "precision@5",
+      "brainwave": 0.1261049723756906,
+      "trec_eval": 0.1261,
+      "difference": -4.972375690609487e-06,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "metric": "precision@10",
+      "brainwave": 0.08573895027624309,
+      "trec_eval": 0.0857,
+      "difference": -3.895027624309377e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "metric": "precision@100",
+      "brainwave": 0.015113950276243095,
+      "trec_eval": 0.0151,
+      "difference": -1.3950276243094792e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "metric": "recall@5",
+      "brainwave": 0.38625909848285533,
+      "trec_eval": 0.3863,
+      "difference": 4.090151714464252e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "metric": "recall@10",
+      "brainwave": 0.4967920996667544,
+      "trec_eval": 0.4968,
+      "difference": 7.900333245602909e-06,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "metric": "recall@100",
+      "brainwave": 0.7991359181794265,
+      "trec_eval": 0.7991,
+      "difference": -3.591817942649733e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "metric": "ndcg_graded@10",
+      "brainwave": 0.3602940293241068,
+      "trec_eval": 0.3603,
+      "difference": 5.970675893196553e-06,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "metric": "ap@100",
+      "brainwave": 0.30607696552002006,
+      "trec_eval": 0.3061,
+      "difference": 2.303447997992203e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "metric": "mrr@10",
+      "brainwave": 0.361857351135666,
+      "trec_eval": 0.3619,
+      "difference": 4.264886433397175e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "metric": "r_precision",
+      "brainwave": 0.23005678330263968,
+      "trec_eval": 0.2301,
+      "difference": 4.3216697360320966e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "metric": "precision@5",
+      "brainwave": 0.12859116022099448,
+      "trec_eval": 0.1286,
+      "difference": 8.839779005509474e-06,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "metric": "precision@10",
+      "brainwave": 0.0863950276243094,
+      "trec_eval": 0.0864,
+      "difference": 4.972375690609487e-06,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "metric": "precision@100",
+      "brainwave": 0.015151933701657459,
+      "trec_eval": 0.0152,
+      "difference": 4.806629834254103e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "metric": "recall@5",
+      "brainwave": 0.3962349546172059,
+      "trec_eval": 0.3962,
+      "difference": -3.495461720592896e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "metric": "recall@10",
+      "brainwave": 0.5049293497325266,
+      "trec_eval": 0.5049,
+      "difference": -2.9349732526551264e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "metric": "recall@100",
+      "brainwave": 0.8025699103306148,
+      "trec_eval": 0.8026,
+      "difference": 3.0089669385224838e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "metric": "ndcg_graded@10",
+      "brainwave": 0.364622307332303,
+      "trec_eval": 0.3646,
+      "difference": -2.2307332303017624e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "metric": "ap@100",
+      "brainwave": 0.30836009578735474,
+      "trec_eval": 0.3084,
+      "difference": 3.9904212645269777e-05,
+      "matches_four_decimal_output": true
+    },
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "metric": "mrr@10",
+      "brainwave": 0.36528243663948085,
+      "trec_eval": 0.3653,
+      "difference": 1.7563360519168292e-05,
+      "matches_four_decimal_output": true
+    }
+  ],
+  "notes": [
+    "recip_rank was evaluated on separately truncated rank-10 files to match MRR@10.",
+    "The -c option included every query in the supplied qrels.",
+    "The exported rank-based scores preserve the evaluated ordering."
+  ]
+}

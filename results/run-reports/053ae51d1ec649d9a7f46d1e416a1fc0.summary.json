@@ -1,0 +1,479 @@
+{
+  "run_id": "053ae51d1ec649d9a7f46d1e416a1fc0",
+  "dataset_id": "881a86b3d4af40adbfb3e80a3334262e",
+  "created_at": "2026-10-14T17:51:25.524565+00:00",
+  "config": {
+    "retrievers": [
+      "dense"
+    ],
+    "presets": [
+      "raw",
+      "conservative"
+    ],
+    "normalization_side": "both",
+    "bootstrap_samples": 10000,
+    "seed": 42,
+    "dense_model": "facebook/mcontriever-msmarco",
+    "dense_revision": "9ff6abed2c2fdf32bbbd8b4e98fb10160e317375",
+    "dense_batch_size": 32,
+    "dense_max_seq_length": 256,
+    "query_prefix": "",
+    "document_prefix": "",
+    "top_k": 100
+  },
+  "dataset": {
+    "dataset_id": "881a86b3d4af40adbfb3e80a3334262e",
+    "name": "MIRACL Arabic full corpus dev query sample 100 seed 42",
+    "created_at": "2026-10-14T07:20:04.201180+00:00",
+    "document_count": 2061414,
+    "query_count": 100,
+    "qrel_count": 1015,
+    "hashes": {
+      "corpus": "0f8568856882e7cebe7ab32674293426a74aa6b194997e03dc0a16ea54328f23",
+      "queries": "7997653fe8fae5cffb79b4ada11d66a51c339322a0e20adc05e203eb0d1d6c9a",
+      "qrels": "23d59529ac1d5dac69d82f91eb28657d56b81d3aef96be82735eeaeade388207",
+      "corpus_db": "bd3d5ea436e69247e91be8074bf737c7a91008721c7e199a0f1488c4dc748d6e"
+    },
+    "provenance": {
+      "source": "MIRACL",
+      "language": "ar",
+      "split": "dev",
+      "scope": "full-corpus-query-subset",
+      "corpus_scope": "full",
+      "dataset_revision": "5be20db9509754dadad47689368639fcec739c00",
+      "corpus_revision": "d921ec7e349ce0d28daf30b2da9da5ee698bef0d",
+      "query_selection": {
+        "method": "lowest sha256(seed:qid) before retrieval",
+        "seed": 42,
+        "requested_limit": 100,
+        "available_queries": 2896,
+        "selected_queries": 100,
+        "selected_qids": [
+          "10103",
+          "10172",
+          "10287",
+          "10361",
+          "10529",
+          "1060",
+          "10618",
+          "10624",
+          "10651",
+          "1106",
+          "11129",
+          "11282",
+          "11549",
+          "11563",
+          "12037",
+          "12351",
+          "1240",
+          "12709",
+          "12730",
+          "12739",
+          "12804",
+          "1284",
+          "13311",
+          "13335",
+          "13480",
+          "13760",
+          "1377",
+          "13796",
+          "13803",
+          "14041",
+          "14446",
+          "14716",
+          "14731",
+          "14851",
+          "14856",
+          "14951",
+          "1793",
+          "1872",
+          "188",
+          "2053",
+          "2114",
+          "2120",
+          "2393",
+          "2602",
+          "2857",
+          "2869",
+          "2977",
+          "3172",
+          "3352",
+          "3364",
+          "3379",
+          "3456",
+          "3596",
+          "3618",
+          "3663",
+          "3691",
+          "3774",
+          "3807",
+          "4085",
+          "4111",
+          "4483",
+          "462",
+          "4679",
+          "4980",
+          "5177",
+          "5256",
+          "5395",
+          "5608",
+          "5609",
+          "6544",
+          "6588",
+          "660",
+          "7281",
+          "7460",
+          "7468",
+          "7499",
+          "7723",
+          "7864",
+          "8182",
+          "8397",
+          "8417",
+          "8421",
+          "8428",
+          "8659",
+          "8721",
+          "88",
+          "8802",
+          "8840",
+          "8923",
+          "8960",
+          "904",
+          "912",
+          "9138",
+          "926",
+          "9458",
+          "9491",
+          "9505",
+          "9549",
+          "9624",
+          "9818"
+        ]
+      },
+      "corpus_selection": {
+        "method": "all passages",
+        "requested_distractors": null,
+        "scanned_passages": 2061414,
+        "included_passages": 2061414,
+        "label_informed": false
+      },
+      "sources": {
+        "topics": "https://huggingface.co/datasets/miracl/miracl/resolve/5be20db9509754dadad47689368639fcec739c00/miracl-v1.0-ar/topics/topics.miracl-v1.0-ar-dev.tsv",
+        "qrels": "https://huggingface.co/datasets/miracl/miracl/resolve/5be20db9509754dadad47689368639fcec739c00/miracl-v1.0-ar/qrels/qrels.miracl-v1.0-ar-dev.tsv",
+        "corpus": [
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-0.jsonl.gz",
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-1.jsonl.gz",
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-2.jsonl.gz",
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-3.jsonl.gz",
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-4.jsonl.gz"
+        ]
+      },
+      "license_notice": "Retain the MIRACL dataset citation and original source licenses; Wikipedia-derived passage content requires its upstream attribution.",
+      "prepared_hashes": {
+        "corpus.jsonl": "0f8568856882e7cebe7ab32674293426a74aa6b194997e03dc0a16ea54328f23",
+        "queries.jsonl": "7340d839c6f81c02a8c9434574fb6724630f436deedbf8d7ea7c8d6a74aff221",
+        "qrels.tsv": "23d59529ac1d5dac69d82f91eb28657d56b81d3aef96be82735eeaeade388207"
+      }
+    },
+    "warnings": [
+      "Custom, pilot, or query-subset data: not comparable to full MIRACL dev scores."
+    ]
+  },
+  "warnings": [
+    "Custom, pilot, or query-subset data: not comparable to full MIRACL dev scores.",
+    "Unjudged passages count as nonrelevant; qrels are incomplete relevance judgments.",
+    "95% paired percentile intervals are unadjusted; conservative vs raw nDCG@10 is the proposed primary comparison. Other contrasts are exploratory.",
+    "Controlled category-tokenizer BM25 is not the official ArabicAnalyzer baseline.",
+    "Dense uses the recorded sentence-transformers architecture and cosine protocol; this does not reproduce MIRACL baselines."
+  ],
+  "provenance": {
+    "engine_source_sha256": "43b8f73abaeaf5e5f6f367d5eec11a559c536929c40935bdeb4f2078d15b59ba",
+    "python": "3.12.13",
+    "sqlite": "3.46.1",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+    "tokenizer": "unicode-category-v1: contiguous Unicode L/M/N characters or underscore; combining marks and tatweel preserved; no lowercase, NFC/NFKC, stemming, stopwords, or other normalization. BM25 uses unique query terms.",
+    "document_fields": "title + newline + text",
+    "tie_break": "corpus ordinal ascending",
+    "trec_export_scores": "rank-based decreasing integers; raw scores in JSON",
+    "cache_storage": "external",
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75,
+      "query_workers": 1,
+      "idf": "ln(1+(N-df+0.5)/(df+0.5))",
+      "query_term_frequency": "unique terms"
+    },
+    "dense": {
+      "sentence_transformers": "6.1.0",
+      "numpy": "2.5.4",
+      "torch": "2.14.1",
+      "transformers": "5.19.0",
+      "device": "cuda:0",
+      "architecture": "SentenceTransformer(\n  (0): Transformer({'transformer_task': 'feature-extraction', 'modality_config': {'text': {'method': 'forward', 'method_output_name': 'last_hidden_state'}}, 'module_output_name': 'token_embeddings', 'architecture': 'BertModel'})\n  (1): Pooling({'embedding_dimension': 768, 'pooling_mode': 'mean', 'include_prompt': True})\n)",
+      "similarity": "dot product of L2-normalized float32 embeddings (cosine)"
+    },
+    "bootstrap": {
+      "unit": "query",
+      "paired": true,
+      "method": "percentile",
+      "confidence": 0.95
+    }
+  },
+  "conditions": [
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "metrics": {
+        "ndcg@10": 0.44783759460147254,
+        "recall@5": 0.5263333333333333,
+        "recall@10": 0.5873333333333334,
+        "recall@100": 0.8375714285714285,
+        "mrr@10": 0.43641269841269836
+      },
+      "changed_queries": 0,
+      "changed_documents": 0,
+      "slices": {
+        "all": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.44783759460147254,
+            "recall@5": 0.5263333333333333,
+            "recall@10": 0.5873333333333334,
+            "recall@100": 0.8375714285714285,
+            "mrr@10": 0.43641269841269836
+          }
+        },
+        "query_changed": {
+          "query_count": 0,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "query_unchanged": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.44783759460147254,
+            "recall@5": 0.5263333333333333,
+            "recall@10": 0.5873333333333334,
+            "recall@100": 0.8375714285714285,
+            "mrr@10": 0.43641269841269836
+          }
+        },
+        "tag:contains_alef_maqsura": {
+          "query_count": 30,
+          "metrics": {
+            "ndcg@10": 0.48432765873629435,
+            "recall@5": 0.5177777777777778,
+            "recall@10": 0.6761111111111112,
+            "recall@100": 0.9,
+            "mrr@10": 0.4513756613756614
+          }
+        },
+        "tag:contains_alef_variants": {
+          "query_count": 46,
+          "metrics": {
+            "ndcg@10": 0.49783442835398894,
+            "recall@5": 0.6014492753623188,
+            "recall@10": 0.6721014492753623,
+            "recall@100": 0.8822463768115942,
+            "mrr@10": 0.46421670117322295
+          }
+        },
+        "tag:contains_diacritics": {
+          "query_count": 5,
+          "metrics": {
+            "ndcg@10": 0.3871977681363855,
+            "recall@5": 0.36666666666666664,
+            "recall@10": 0.5666666666666667,
+            "recall@100": 0.9333333333333333,
+            "mrr@10": 0.3952380952380953
+          }
+        },
+        "tag:contains_taa_marbuta": {
+          "query_count": 48,
+          "metrics": {
+            "ndcg@10": 0.5026428465043232,
+            "recall@5": 0.6048611111111112,
+            "recall@10": 0.6465277777777778,
+            "recall@100": 0.8420138888888888,
+            "mrr@10": 0.47366071428571427
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "recall@5": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "recall@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "recall@100": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "mrr@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        }
+      }
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "metrics": {
+        "ndcg@10": 0.44106800048060707,
+        "recall@5": 0.5128333333333334,
+        "recall@10": 0.5868333333333333,
+        "recall@100": 0.8320714285714286,
+        "mrr@10": 0.4302896825396825
+      },
+      "changed_queries": 49,
+      "changed_documents": 1852030,
+      "slices": {
+        "all": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.44106800048060707,
+            "recall@5": 0.5128333333333334,
+            "recall@10": 0.5868333333333333,
+            "recall@100": 0.8320714285714286,
+            "mrr@10": 0.4302896825396825
+          }
+        },
+        "query_changed": {
+          "query_count": 49,
+          "metrics": {
+            "ndcg@10": 0.4518287548615154,
+            "recall@5": 0.5595238095238095,
+            "recall@10": 0.620748299319728,
+            "recall@100": 0.8333333333333334,
+            "mrr@10": 0.4143424036281179
+          }
+        },
+        "query_unchanged": {
+          "query_count": 51,
+          "metrics": {
+            "ndcg@10": 0.4307292364675774,
+            "recall@5": 0.46797385620915033,
+            "recall@10": 0.5542483660130719,
+            "recall@100": 0.830859010270775,
+            "mrr@10": 0.4456115779645191
+          }
+        },
+        "tag:contains_alef_maqsura": {
+          "query_count": 30,
+          "metrics": {
+            "ndcg@10": 0.44145361904583424,
+            "recall@5": 0.5094444444444445,
+            "recall@10": 0.6372222222222222,
+            "recall@100": 0.875,
+            "mrr@10": 0.40620370370370373
+          }
+        },
+        "tag:contains_alef_variants": {
+          "query_count": 46,
+          "metrics": {
+            "ndcg@10": 0.45614544535427765,
+            "recall@5": 0.5634057971014493,
+            "recall@10": 0.6286231884057971,
+            "recall@100": 0.8224637681159421,
+            "mrr@10": 0.4152777777777778
+          }
+        },
+        "tag:contains_diacritics": {
+          "query_count": 5,
+          "metrics": {
+            "ndcg@10": 0.35080608170946603,
+            "recall@5": 0.36666666666666664,
+            "recall@10": 0.5666666666666667,
+            "recall@100": 0.9333333333333333,
+            "mrr@10": 0.3622222222222222
+          }
+        },
+        "tag:contains_taa_marbuta": {
+          "query_count": 48,
+          "metrics": {
+            "ndcg@10": 0.5193619179287203,
+            "recall@5": 0.5996527777777778,
+            "recall@10": 0.6586805555555556,
+            "recall@100": 0.8784722222222222,
+            "mrr@10": 0.5038773148148148
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": -0.006769594120865499,
+          "ci_low": -0.0380981490464796,
+          "ci_high": 0.022893319901943463,
+          "wins": 24,
+          "losses": 14,
+          "ties": 62
+        },
+        "recall@5": {
+          "delta": -0.013500000000000002,
+          "ci_low": -0.0625,
+          "ci_high": 0.0305,
+          "wins": 6,
+          "losses": 4,
+          "ties": 90
+        },
+        "recall@10": {
+          "delta": -0.000500000000000001,
+          "ci_low": -0.0423375,
+          "ci_high": 0.04033333333333333,
+          "wins": 7,
+          "losses": 5,
+          "ties": 88
+        },
+        "recall@100": {
+          "delta": -0.0055,
+          "ci_low": -0.05,
+          "ci_high": 0.035,
+          "wins": 5,
+          "losses": 3,
+          "ties": 92
+        },
+        "mrr@10": {
+          "delta": -0.006123015873015874,
+          "ci_low": -0.04356418650793651,
+          "ci_high": 0.028992460317460313,
+          "wins": 20,
+          "losses": 12,
+          "ties": 68
+        }
+      }
+    }
+  ]
+}

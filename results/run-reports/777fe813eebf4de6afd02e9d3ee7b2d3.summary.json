@@ -1,0 +1,989 @@
+{
+  "run_id": "777fe813eebf4de6afd02e9d3ee7b2d3",
+  "dataset_id": "3ac4765465d7410fa8130acc89074e35",
+  "created_at": "2026-10-12T10:46:34.441693+00:00",
+  "config": {
+    "retrievers": [
+      "dense"
+    ],
+    "presets": [
+      "raw",
+      "diacritics",
+      "tatweel",
+      "alef",
+      "conservative",
+      "aggressive"
+    ],
+    "normalization_side": "both",
+    "bootstrap_samples": 1000,
+    "seed": 42,
+    "dense_model": "facebook/mcontriever-msmarco",
+    "dense_revision": "9ff6abed2c2fdf32bbbd8b4e98fb10160e317375",
+    "dense_batch_size": 32,
+    "dense_max_seq_length": 256,
+    "query_prefix": "",
+    "document_prefix": "",
+    "top_k": 100
+  },
+  "dataset": {
+    "dataset_id": "3ac4765465d7410fa8130acc89074e35",
+    "name": "MIRACL Arabic train pilot 100 queries seed 42",
+    "created_at": "2026-10-12T10:14:48.119293+00:00",
+    "document_count": 1670,
+    "query_count": 100,
+    "qrel_count": 673,
+    "hashes": {
+      "corpus": "e330d60202eb4b274ef7e86537db610e747dbfb526d7757f8dba2fceba84afa5",
+      "queries": "a8a2c3a501de9c6c0fdd882e552b0626b58d909bdd9f89acdbf60df1b1c79afe",
+      "qrels": "09dad3dbc4c65b960c63999fabb2c48f3cb47575017a2631be644361188d77a5",
+      "corpus_db": "e6657d104fcaf7ec600fb262e86cddd613d7db5f6969e9bdc4eaee920c171c96"
+    },
+    "provenance": {
+      "source": "MIRACL",
+      "language": "ar",
+      "split": "train",
+      "scope": "miracl-pilot",
+      "corpus_scope": "qrel-complete-pilot",
+      "dataset_revision": "5be20db9509754dadad47689368639fcec739c00",
+      "corpus_revision": "d921ec7e349ce0d28daf30b2da9da5ee698bef0d",
+      "query_selection": {
+        "method": "lowest sha256(seed:qid) before retrieval",
+        "seed": 42,
+        "requested_limit": 100,
+        "available_queries": 3495,
+        "selected_queries": 100,
+        "selected_qids": [
+          "1",
+          "10024",
+          "10095",
+          "10248",
+          "10263",
+          "1037",
+          "1040",
+          "10425",
+          "10475",
+          "1052",
+          "10537",
+          "1056",
+          "10578",
+          "10707",
+          "10720",
+          "10814",
+          "10817",
+          "10914",
+          "10972",
+          "1098",
+          "1105",
+          "11080",
+          "11091",
+          "11160",
+          "11176",
+          "11259",
+          "11283",
+          "11338",
+          "11342",
+          "11349",
+          "11385",
+          "1139",
+          "11450",
+          "11472",
+          "1149",
+          "1168",
+          "11685",
+          "11868",
+          "1188",
+          "11898",
+          "12042",
+          "1205",
+          "12086",
+          "12131",
+          "12254",
+          "1226",
+          "12345",
+          "12469",
+          "12484",
+          "12623",
+          "12732",
+          "12810",
+          "12820",
+          "12823",
+          "129",
+          "1294",
+          "12989",
+          "13004",
+          "1301",
+          "13026",
+          "13065",
+          "13148",
+          "13257",
+          "13406",
+          "1343",
+          "13578",
+          "136",
+          "145",
+          "14739",
+          "154",
+          "191",
+          "194",
+          "216",
+          "266",
+          "3152",
+          "331",
+          "384",
+          "3924",
+          "395",
+          "415",
+          "4364",
+          "441",
+          "45",
+          "453",
+          "465",
+          "469",
+          "484",
+          "491",
+          "4977",
+          "5089",
+          "542",
+          "5937",
+          "601",
+          "607",
+          "653",
+          "677",
+          "766",
+          "775",
+          "7911",
+          "861"
+        ]
+      },
+      "corpus_selection": {
+        "method": "all judged passages for selected queries + lowest sha256(seed:passage_id)",
+        "requested_distractors": 1000,
+        "scanned_passages": 2061414,
+        "included_passages": 1670,
+        "label_informed": true
+      },
+      "sources": {
+        "topics": "https://huggingface.co/datasets/miracl/miracl/resolve/5be20db9509754dadad47689368639fcec739c00/miracl-v1.0-ar/topics/topics.miracl-v1.0-ar-train.tsv",
+        "qrels": "https://huggingface.co/datasets/miracl/miracl/resolve/5be20db9509754dadad47689368639fcec739c00/miracl-v1.0-ar/qrels/qrels.miracl-v1.0-ar-train.tsv",
+        "corpus": [
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-0.jsonl.gz",
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-1.jsonl.gz",
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-2.jsonl.gz",
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-3.jsonl.gz",
+          "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-ar/docs-4.jsonl.gz"
+        ]
+      },
+      "license_notice": "Retain the MIRACL dataset citation and original source licenses; Wikipedia-derived passage content requires its upstream attribution.",
+      "prepared_hashes": {
+        "corpus.jsonl": "e330d60202eb4b274ef7e86537db610e747dbfb526d7757f8dba2fceba84afa5",
+        "queries.jsonl": "854c96bc29e3ad7dd5bf01245e97aeed9a2e159d9523c1339daa40e68ff09ab8",
+        "qrels.tsv": "09dad3dbc4c65b960c63999fabb2c48f3cb47575017a2631be644361188d77a5"
+      }
+    },
+    "warnings": [
+      "Custom, pilot, or query-subset data: not comparable to full MIRACL dev scores."
+    ]
+  },
+  "warnings": [
+    "Custom, pilot, or query-subset data: not comparable to full MIRACL dev scores.",
+    "Unjudged passages count as nonrelevant; qrels are incomplete relevance judgments.",
+    "95% paired percentile intervals are unadjusted; conservative vs raw nDCG@10 is the proposed primary comparison. Other contrasts are exploratory.",
+    "Controlled category-tokenizer BM25 is not the official ArabicAnalyzer baseline.",
+    "Dense uses the recorded sentence-transformers architecture and cosine protocol; this does not reproduce MIRACL baselines."
+  ],
+  "provenance": {
+    "engine_source_sha256": "5eb65041c91bc24b19e8bc8cda609fd48d040b799fd7546bfeb0e47edf1bf912",
+    "python": "3.12.13",
+    "sqlite": "3.46.1",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+    "tokenizer": "unicode-category-v1: contiguous Unicode L/M/N characters or underscore; combining marks and tatweel preserved; no lowercase, NFC/NFKC, stemming, stopwords, or other normalization. BM25 uses unique query terms.",
+    "document_fields": "title + newline + text",
+    "tie_break": "corpus ordinal ascending",
+    "trec_export_scores": "rank-based decreasing integers; raw scores in JSON",
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75,
+      "idf": "ln(1+(N-df+0.5)/(df+0.5))",
+      "query_term_frequency": "unique terms"
+    },
+    "dense": {
+      "sentence_transformers": "6.1.0",
+      "numpy": "2.5.4",
+      "torch": "2.14.1",
+      "transformers": "5.19.0",
+      "device": "cpu",
+      "architecture": "SentenceTransformer(\n  (0): Transformer({'transformer_task': 'feature-extraction', 'modality_config': {'text': {'method': 'forward', 'method_output_name': 'last_hidden_state'}}, 'module_output_name': 'token_embeddings', 'architecture': 'BertModel'})\n  (1): Pooling({'embedding_dimension': 768, 'pooling_mode': 'mean', 'include_prompt': True})\n)",
+      "similarity": "dot product of L2-normalized float32 embeddings (cosine)"
+    },
+    "bootstrap": {
+      "unit": "query",
+      "paired": true,
+      "method": "percentile",
+      "confidence": 0.95
+    }
+  },
+  "conditions": [
+    {
+      "retriever": "dense",
+      "preset": "raw",
+      "metrics": {
+        "ndcg@10": 0.8261572345505465,
+        "recall@5": 0.8257222222222222,
+        "recall@10": 0.98,
+        "recall@100": 1.0,
+        "mrr@10": 0.8092063492063493
+      },
+      "changed_queries": 0,
+      "changed_documents": 0,
+      "slices": {
+        "all": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.8261572345505465,
+            "recall@5": 0.8257222222222222,
+            "recall@10": 0.98,
+            "recall@100": 1.0,
+            "mrr@10": 0.8092063492063493
+          }
+        },
+        "query_changed": {
+          "query_count": 0,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "query_unchanged": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.8261572345505465,
+            "recall@5": 0.8257222222222222,
+            "recall@10": 0.98,
+            "recall@100": 1.0,
+            "mrr@10": 0.8092063492063493
+          }
+        },
+        "tag:contains_alef_maqsura": {
+          "query_count": 23,
+          "metrics": {
+            "ndcg@10": 0.8645989314532897,
+            "recall@5": 0.8405797101449275,
+            "recall@10": 0.9710144927536232,
+            "recall@100": 1.0,
+            "mrr@10": 0.8695652173913043
+          }
+        },
+        "tag:contains_alef_variants": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.8541234671588444,
+            "recall@5": 0.8379273504273504,
+            "recall@10": 0.9855769230769231,
+            "recall@100": 1.0,
+            "mrr@10": 0.8537087912087913
+          }
+        },
+        "tag:contains_diacritics": {
+          "query_count": 7,
+          "metrics": {
+            "ndcg@10": 0.9258746399737395,
+            "recall@5": 0.9523809523809524,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 0.9047619047619048
+          }
+        },
+        "tag:contains_taa_marbuta": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.8307604283660405,
+            "recall@5": 0.832051282051282,
+            "recall@10": 0.9887820512820512,
+            "recall@100": 1.0,
+            "mrr@10": 0.7965506715506715
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "recall@5": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "recall@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "recall@100": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "mrr@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        }
+      }
+    },
+    {
+      "retriever": "dense",
+      "preset": "diacritics",
+      "metrics": {
+        "ndcg@10": 0.823866256883401,
+        "recall@5": 0.8365555555555555,
+        "recall@10": 0.98,
+        "recall@100": 1.0,
+        "mrr@10": 0.808861111111111
+      },
+      "changed_queries": 7,
+      "changed_documents": 719,
+      "slices": {
+        "all": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.823866256883401,
+            "recall@5": 0.8365555555555555,
+            "recall@10": 0.98,
+            "recall@100": 1.0,
+            "mrr@10": 0.808861111111111
+          }
+        },
+        "query_changed": {
+          "query_count": 7,
+          "metrics": {
+            "ndcg@10": 0.9560527776224331,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "query_unchanged": {
+          "query_count": 93,
+          "metrics": {
+            "ndcg@10": 0.8139167338170223,
+            "recall@5": 0.8242532855436081,
+            "recall@10": 0.978494623655914,
+            "recall@100": 1.0,
+            "mrr@10": 0.7944743130227001
+          }
+        },
+        "tag:contains_alef_maqsura": {
+          "query_count": 23,
+          "metrics": {
+            "ndcg@10": 0.8759493297358725,
+            "recall@5": 0.8188405797101449,
+            "recall@10": 0.9710144927536232,
+            "recall@100": 1.0,
+            "mrr@10": 0.8840579710144927
+          }
+        },
+        "tag:contains_alef_variants": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.8493305089981953,
+            "recall@5": 0.847542735042735,
+            "recall@10": 0.9855769230769231,
+            "recall@100": 1.0,
+            "mrr@10": 0.850801282051282
+          }
+        },
+        "tag:contains_diacritics": {
+          "query_count": 7,
+          "metrics": {
+            "ndcg@10": 0.9560527776224331,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 1.0
+          }
+        },
+        "tag:contains_taa_marbuta": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.8341603459771065,
+            "recall@5": 0.8528846153846155,
+            "recall@10": 0.9887820512820512,
+            "recall@100": 1.0,
+            "mrr@10": 0.8112713675213675
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": -0.0022909776671454184,
+          "ci_low": -0.014769411783088104,
+          "ci_high": 0.01013946680787697,
+          "wins": 8,
+          "losses": 16,
+          "ties": 76
+        },
+        "recall@5": {
+          "delta": 0.010833333333333335,
+          "ci_low": -0.011666666666666665,
+          "ci_high": 0.0375,
+          "wins": 3,
+          "losses": 2,
+          "ties": 95
+        },
+        "recall@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "recall@100": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "mrr@10": {
+          "delta": -0.0003452380952380946,
+          "ci_low": -0.022679464285714282,
+          "ci_high": 0.021655059523809528,
+          "wins": 5,
+          "losses": 5,
+          "ties": 90
+        }
+      }
+    },
+    {
+      "retriever": "dense",
+      "preset": "tatweel",
+      "metrics": {
+        "ndcg@10": 0.8263451373100579,
+        "recall@5": 0.8307222222222223,
+        "recall@10": 0.98,
+        "recall@100": 1.0,
+        "mrr@10": 0.8095396825396826
+      },
+      "changed_queries": 0,
+      "changed_documents": 182,
+      "slices": {
+        "all": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.8263451373100579,
+            "recall@5": 0.8307222222222223,
+            "recall@10": 0.98,
+            "recall@100": 1.0,
+            "mrr@10": 0.8095396825396826
+          }
+        },
+        "query_changed": {
+          "query_count": 0,
+          "metrics": {
+            "ndcg@10": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "recall@100": 0.0,
+            "mrr@10": 0.0
+          }
+        },
+        "query_unchanged": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.8263451373100579,
+            "recall@5": 0.8307222222222223,
+            "recall@10": 0.98,
+            "recall@100": 1.0,
+            "mrr@10": 0.8095396825396826
+          }
+        },
+        "tag:contains_alef_maqsura": {
+          "query_count": 23,
+          "metrics": {
+            "ndcg@10": 0.8645989314532897,
+            "recall@5": 0.8405797101449275,
+            "recall@10": 0.9710144927536232,
+            "recall@100": 1.0,
+            "mrr@10": 0.8695652173913043
+          }
+        },
+        "tag:contains_alef_variants": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.854484818619443,
+            "recall@5": 0.847542735042735,
+            "recall@10": 0.9855769230769231,
+            "recall@100": 1.0,
+            "mrr@10": 0.8543498168498169
+          }
+        },
+        "tag:contains_diacritics": {
+          "query_count": 7,
+          "metrics": {
+            "ndcg@10": 0.9258746399737395,
+            "recall@5": 0.9523809523809524,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 0.9047619047619048
+          }
+        },
+        "tag:contains_taa_marbuta": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.8307604283660405,
+            "recall@5": 0.832051282051282,
+            "recall@10": 0.9887820512820512,
+            "recall@100": 1.0,
+            "mrr@10": 0.7965506715506715
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": 0.00018790275951132085,
+          "ci_low": 0.0,
+          "ci_high": 0.0007516110380452834,
+          "wins": 1,
+          "losses": 0,
+          "ties": 99
+        },
+        "recall@5": {
+          "delta": 0.005,
+          "ci_low": 0.0,
+          "ci_high": 0.02,
+          "wins": 1,
+          "losses": 0,
+          "ties": 99
+        },
+        "recall@10": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "recall@100": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "mrr@10": {
+          "delta": 0.00033333333333333354,
+          "ci_low": 0.0,
+          "ci_high": 0.0013333333333333342,
+          "wins": 1,
+          "losses": 0,
+          "ties": 99
+        }
+      }
+    },
+    {
+      "retriever": "dense",
+      "preset": "alef",
+      "metrics": {
+        "ndcg@10": 0.8128538699332886,
+        "recall@5": 0.8243888888888888,
+        "recall@10": 0.9708333333333333,
+        "recall@100": 1.0,
+        "mrr@10": 0.7928571428571429
+      },
+      "changed_queries": 52,
+      "changed_documents": 1532,
+      "slices": {
+        "all": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.8128538699332886,
+            "recall@5": 0.8243888888888888,
+            "recall@10": 0.9708333333333333,
+            "recall@100": 1.0,
+            "mrr@10": 0.7928571428571429
+          }
+        },
+        "query_changed": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.8329747119684765,
+            "recall@5": 0.836965811965812,
+            "recall@10": 0.9615384615384616,
+            "recall@100": 1.0,
+            "mrr@10": 0.8381410256410257
+          }
+        },
+        "query_unchanged": {
+          "query_count": 48,
+          "metrics": {
+            "ndcg@10": 0.791056291061835,
+            "recall@5": 0.8107638888888888,
+            "recall@10": 0.9809027777777778,
+            "recall@100": 1.0,
+            "mrr@10": 0.7437996031746031
+          }
+        },
+        "tag:contains_alef_maqsura": {
+          "query_count": 23,
+          "metrics": {
+            "ndcg@10": 0.82760935385772,
+            "recall@5": 0.786231884057971,
+            "recall@10": 0.9420289855072465,
+            "recall@100": 1.0,
+            "mrr@10": 0.8478260869565217
+          }
+        },
+        "tag:contains_alef_variants": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.8329747119684765,
+            "recall@5": 0.836965811965812,
+            "recall@10": 0.9615384615384616,
+            "recall@100": 1.0,
+            "mrr@10": 0.8381410256410257
+          }
+        },
+        "tag:contains_diacritics": {
+          "query_count": 7,
+          "metrics": {
+            "ndcg@10": 0.7363653867425389,
+            "recall@5": 0.8095238095238095,
+            "recall@10": 0.8571428571428571,
+            "recall@100": 1.0,
+            "mrr@10": 0.6904761904761905
+          }
+        },
+        "tag:contains_taa_marbuta": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.8290341388716664,
+            "recall@5": 0.8102564102564103,
+            "recall@10": 0.9887820512820512,
+            "recall@100": 1.0,
+            "mrr@10": 0.7987637362637362
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": -0.01330336461725791,
+          "ci_low": -0.042835545926875336,
+          "ci_high": 0.011428638037349163,
+          "wins": 23,
+          "losses": 14,
+          "ties": 63
+        },
+        "recall@5": {
+          "delta": -0.001333333333333333,
+          "ci_low": -0.03184166666666667,
+          "ci_high": 0.02834166666666666,
+          "wins": 5,
+          "losses": 6,
+          "ties": 89
+        },
+        "recall@10": {
+          "delta": -0.009166666666666667,
+          "ci_low": -0.035,
+          "ci_high": 0.006666666666666666,
+          "wins": 1,
+          "losses": 2,
+          "ties": 97
+        },
+        "recall@100": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "mrr@10": {
+          "delta": -0.01634920634920635,
+          "ci_low": -0.055683531746031745,
+          "ci_high": 0.015993055555555555,
+          "wins": 9,
+          "losses": 8,
+          "ties": 83
+        }
+      }
+    },
+    {
+      "retriever": "dense",
+      "preset": "conservative",
+      "metrics": {
+        "ndcg@10": 0.8227487403871642,
+        "recall@5": 0.8360555555555556,
+        "recall@10": 0.9775,
+        "recall@100": 1.0,
+        "mrr@10": 0.8076071428571429
+      },
+      "changed_queries": 54,
+      "changed_documents": 1550,
+      "slices": {
+        "all": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.8227487403871642,
+            "recall@5": 0.8360555555555556,
+            "recall@10": 0.9775,
+            "recall@100": 1.0,
+            "mrr@10": 0.8076071428571429
+          }
+        },
+        "query_changed": {
+          "query_count": 54,
+          "metrics": {
+            "ndcg@10": 0.8508676021713016,
+            "recall@5": 0.8578189300411523,
+            "recall@10": 0.9814814814814815,
+            "recall@100": 1.0,
+            "mrr@10": 0.8541887125220458
+          }
+        },
+        "query_unchanged": {
+          "query_count": 46,
+          "metrics": {
+            "ndcg@10": 0.7897396417710028,
+            "recall@5": 0.8105072463768116,
+            "recall@10": 0.9728260869565217,
+            "recall@100": 1.0,
+            "mrr@10": 0.7529244306418219
+          }
+        },
+        "tag:contains_alef_maqsura": {
+          "query_count": 23,
+          "metrics": {
+            "ndcg@10": 0.8429433153758478,
+            "recall@5": 0.8079710144927535,
+            "recall@10": 0.9710144927536232,
+            "recall@100": 1.0,
+            "mrr@10": 0.8565217391304347
+          }
+        },
+        "tag:contains_alef_variants": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.8479600510036468,
+            "recall@5": 0.8523504273504273,
+            "recall@10": 0.9807692307692307,
+            "recall@100": 1.0,
+            "mrr@10": 0.8485805860805861
+          }
+        },
+        "tag:contains_diacritics": {
+          "query_count": 7,
+          "metrics": {
+            "ndcg@10": 0.8799287802061979,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 0.8857142857142858
+          }
+        },
+        "tag:contains_taa_marbuta": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.8333156137277952,
+            "recall@5": 0.8192307692307692,
+            "recall@10": 0.9887820512820512,
+            "recall@100": 1.0,
+            "mrr@10": 0.8098214285714286
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": -0.003408494163382324,
+          "ci_low": -0.02445564049174105,
+          "ci_high": 0.016992506017269912,
+          "wins": 20,
+          "losses": 14,
+          "ties": 66
+        },
+        "recall@5": {
+          "delta": 0.010333333333333335,
+          "ci_low": -0.012683333333333331,
+          "ci_high": 0.03702083333333332,
+          "wins": 6,
+          "losses": 5,
+          "ties": 89
+        },
+        "recall@10": {
+          "delta": -0.0025,
+          "ci_low": -0.0075,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 1,
+          "ties": 99
+        },
+        "recall@100": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "mrr@10": {
+          "delta": -0.0015992063492063489,
+          "ci_low": -0.03517123015873016,
+          "ci_high": 0.03134583333333333,
+          "wins": 9,
+          "losses": 8,
+          "ties": 83
+        }
+      }
+    },
+    {
+      "retriever": "dense",
+      "preset": "aggressive",
+      "metrics": {
+        "ndcg@10": 0.8275697559278703,
+        "recall@5": 0.8330555555555555,
+        "recall@10": 0.9708333333333333,
+        "recall@100": 1.0,
+        "mrr@10": 0.8245833333333333
+      },
+      "changed_queries": 83,
+      "changed_documents": 1644,
+      "slices": {
+        "all": {
+          "query_count": 100,
+          "metrics": {
+            "ndcg@10": 0.8275697559278703,
+            "recall@5": 0.8330555555555555,
+            "recall@10": 0.9708333333333333,
+            "recall@100": 1.0,
+            "mrr@10": 0.8245833333333333
+          }
+        },
+        "query_changed": {
+          "query_count": 83,
+          "metrics": {
+            "ndcg@10": 0.8236305277121259,
+            "recall@5": 0.8241633199464524,
+            "recall@10": 0.9648594377510039,
+            "recall@100": 1.0,
+            "mrr@10": 0.8258032128514057
+          }
+        },
+        "query_unchanged": {
+          "query_count": 17,
+          "metrics": {
+            "ndcg@10": 0.8468024583929752,
+            "recall@5": 0.8764705882352941,
+            "recall@10": 1.0,
+            "recall@100": 1.0,
+            "mrr@10": 0.8186274509803921
+          }
+        },
+        "tag:contains_alef_maqsura": {
+          "query_count": 23,
+          "metrics": {
+            "ndcg@10": 0.8020676757600506,
+            "recall@5": 0.7753623188405797,
+            "recall@10": 0.9275362318840579,
+            "recall@100": 1.0,
+            "mrr@10": 0.8442028985507247
+          }
+        },
+        "tag:contains_alef_variants": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.8136828478514174,
+            "recall@5": 0.8090811965811966,
+            "recall@10": 0.9487179487179488,
+            "recall@100": 1.0,
+            "mrr@10": 0.8285256410256411
+          }
+        },
+        "tag:contains_diacritics": {
+          "query_count": 7,
+          "metrics": {
+            "ndcg@10": 0.8571428571428571,
+            "recall@5": 0.8571428571428571,
+            "recall@10": 0.8571428571428571,
+            "recall@100": 1.0,
+            "mrr@10": 0.8571428571428571
+          }
+        },
+        "tag:contains_taa_marbuta": {
+          "query_count": 52,
+          "metrics": {
+            "ndcg@10": 0.8371699992190648,
+            "recall@5": 0.8288461538461539,
+            "recall@10": 0.9823717948717949,
+            "recall@100": 1.0,
+            "mrr@10": 0.8293269230769231
+          }
+        }
+      },
+      "comparison_to_raw": {
+        "ndcg@10": {
+          "delta": 0.0014125213773238021,
+          "ci_low": -0.03590941754578778,
+          "ci_high": 0.03335655491401371,
+          "wins": 27,
+          "losses": 17,
+          "ties": 56
+        },
+        "recall@5": {
+          "delta": 0.0073333333333333315,
+          "ci_low": -0.041675000000000004,
+          "ci_high": 0.05403333333333331,
+          "wins": 11,
+          "losses": 7,
+          "ties": 82
+        },
+        "recall@10": {
+          "delta": -0.009166666666666667,
+          "ci_low": -0.0391875,
+          "ci_high": 0.014187499999999983,
+          "wins": 2,
+          "losses": 3,
+          "ties": 95
+        },
+        "recall@100": {
+          "delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 100
+        },
+        "mrr@10": {
+          "delta": 0.015376984126984128,
+          "ci_low": -0.02999454365079365,
+          "ci_high": 0.05635466269841266,
+          "wins": 17,
+          "losses": 5,
+          "ties": 78
+        }
+      }
+    }
+  ]
+}
