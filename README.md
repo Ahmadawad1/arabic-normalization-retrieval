@@ -31,6 +31,7 @@ Raw means no external Arabic normalization. The dense model still uses its fixed
 - `data/diagnostic/`: small fictional fixture for code checks only.
 - `data/miracl-ar-dev/`: exact query set, qrels, and provenance. The 1.28 GB corpus is not stored in Git.
 - `docs/PROTOCOL.md`: preregistered decisions and recorded deviations.
+- `docs/TUTORIAL.md`: beginner-friendly explanation of the design, commands, metrics, and results.
 - `docs/run-register.tsv`: diagnostic, pilot, 100-query, and full-run records.
 - `results/metrics/`: aggregate and per-query metrics plus failure analysis.
 - `results/trec/`: four depth-100 TREC runs and independent `trec_eval` verification.
