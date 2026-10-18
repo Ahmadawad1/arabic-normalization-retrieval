@@ -89,7 +89,9 @@ See [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) for hardware, expected ru
 
 ## Data and large artifacts
 
-The repository does not copy the MIRACL passage corpus or model cache. The preparation command retrieves the official pinned source files. A future Hugging Face dataset repository can mirror the convenient query, qrel, ranking, and report artifacts described in [huggingface/README.md](huggingface/README.md).
+The saved dataset and result artifacts are also available in the [Hugging Face dataset repository](https://huggingface.co/datasets/ahmad-awad/arabic-normalization-retrieval).
+
+This repository does not copy the MIRACL passage corpus or model cache. The preparation command retrieves the official pinned source files.
 
 ## License and attribution
 

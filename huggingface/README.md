@@ -1,8 +1,10 @@
-# Hugging Face release plan
+# Hugging Face dataset release
 
-GitHub is the main source-code repository. A Hugging Face dataset repository can provide easier access to the larger result artifacts.
+GitHub is the main source-code repository. The larger result artifacts are published at:
 
-Recommended Hugging Face contents:
+<https://huggingface.co/datasets/ahmad-awad/arabic-normalization-retrieval>
+
+Published contents:
 
 - `metrics-summary.csv`
 - `per-query-metrics.csv`
@@ -14,4 +16,4 @@ Recommended Hugging Face contents:
 
 Do not upload model caches or a copied MIRACL corpus. Link to the official MIRACL source and preserve its attribution.
 
-Add the Hugging Face dataset URL to the main README after that repository is created.
+The dataset card uses Apache License 2.0 and includes the MIRACL citation, experiment scope, main result and limitations.
